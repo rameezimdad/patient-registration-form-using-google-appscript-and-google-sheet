@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+<body style="background-color: white;">
+<div class="container">
+    <form id="contact_form">
+        <fieldset>
+            <legend>Paitent Registration Form</legend>
+
+            <div class="row">
+                <!-- First Name -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">First Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Name -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Middle Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="middle_name" placeholder="Middle Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Patient ID -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Patient ID</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+                            <input name="patient_id" placeholder="Patient ID" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Gender</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="gender" class="form-control selectpicker" required>
+                                <option value="">Please select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="Email Address" class="form-control" type="email" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- WhatsApp -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">WhatsApp</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input name="whatsapp" placeholder="WhatsApp Number" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Emergency Contact</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input name="emergency_contact" placeholder="Emergency Contact Number" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- City -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">City</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="city" placeholder="City" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- State -->
+            <div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Province</label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" required>
+                <option value="">Please select your province</option>
+                <option>Punjab</option>
+                <option>Sindh</option>
+                <option>Khyber Pakhtunkhwa</option>
+                <option>Balochistan</option>
+                <option>Gilgit-Baltistan</option>
+                <option>Azad Jammu and Kashmir</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Country -->
+            <div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Country</label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+            <select name="country" class="form-control" required>
+                <option value="" disabled selected>Select Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Brunei">Brunei</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="China">China</option>
+                <option value="East Timor">East Timor</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Israel">Israel</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Laos">Laos</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Nepal">Nepal</option>
+                <option value="North Korea">North Korea</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Syria">Syria</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Tajikistan">Tajikistan</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Yemen">Yemen</option>
+            </select>
+        </div>
+    </div>
+</div>
+// For Custom Projects : https://wa.me/923224083545
+
+                <!-- Postal Code -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Postal Code</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="postal_code" placeholder="Postal Code" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Date of Birth -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Date of Birth</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            <input name="birth_day" placeholder="Day" class="form-control" type="number" min="1" max="31" required>
+                            <input name="birth_month" placeholder="Month" class="form-control" type="number" min="1" max="12" required>
+                            <input name="birth_year" placeholder="Year" class="form-control" type="number" min="1900" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blood Group -->
+               <div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Blood Group</label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span>
+            <select name="blood_group" class="form-control">
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+    </div>
+</div>
+// For Custom Projects : https://wa.me/923224083545
+
+         <!-- Sugar Level -->
+<div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Sugar Level</label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-heart"></i></span>
+            <select name="sugar_level" class="form-control">
+                <option value="">Select Sugar Level</option>
+                <option value="Low">Low</option>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+    </div>
+</div>
+
+// For Custom Projects : https://wa.me/923224083545
+            <div class="row">
+               <div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Your Concern</label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+            <select class="form-control" name="concern" required>
+                <option value="">Select your concern</option>
+                <option value="Technical Issue">Technical Issue</option>
+                <option value="Billing Inquiry">Billing Inquiry</option>
+                <option value="Product Feedback">Product Feedback</option>
+                <!-- Add more options here -->
+            </select>
+        </div>
+    </div>
+</div>
+
+
+         <div class="col-md-4">
+    <div class="form-group">
+        <label class="control-label">Are you a donor or a receiver?</label>
+        <div class="input-group">
+            <select class="form-control" name="donor_receiver" required>
+                <option value="">Select one</option>
+                <option value="donor">Donor</option>
+                <option value="receiver">Receiver</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+// For Custom Projects : https://wa.me/923224083545
+                <!-- Submit Button -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <button type="submit" class="btn btn-warning form-control">Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+ $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+      // BootstrapValidator configuration
+    }).on('success.form.bv', function(e) {
+      // Prevent form submission
+      e.preventDefault();
+
+      // Serialize form data
+      var formData = {};
+      $('#contact_form').find('input, select, textarea').each(function() {
+        formData[this.name] = $(this).val();
+      });
+
+      // Submit form data
+      google.script.run.withSuccessHandler(showSuccessAlert).withFailureHandler(showFailureAlert).patientRegistration(formData);
+    });
+
+    function showSuccessAlert(response) {
+      swal("Success!", response, "success");
+      $('#contact_form')[0].reset(); // Reset form after successful submission
+    }
+
+    function showFailureAlert(error) {
+      swal("Error!", error, "error");
+    }
+  });
+</script>
+
+</body>
+</html>
+// For Custom Projects : https://wa.me/923224083545
